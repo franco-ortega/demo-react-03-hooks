@@ -81,17 +81,56 @@ function App() {
 
   };
 
+
+
+
+  // The useEffect hook is a function that takes in two arguments:
+  // Arguement #1: callback function
+  // Arguement #2 (optional): dependency array
+  //
+  //
+  // These are some simplified looking examples:
+  //
+  // useEffect(callback)
+  // useEffect(callback, dependencyArray)
+  // useEffect(() => {})
+  // useEffect(() => {}, [])
+  // useEffect(() => { *code to run* })
+  // useEffect(() => { *code to run* }, [itemOne, itemFive])
+  //
+  //
+  // A slightly more fleshed out useEffect example/template:
+  //
+  // useEffect(() => {
+  //   *code to run*
+  //   return () => {
+  //     cleanup
+  //   }
+  // }, [input])
+
+
   useEffect(() => {
-    console.log('The page rendered and when any state changes!!')
-    //make fetch call to get Todo data
+    // This useEffect takes in a callback function but no dependency array
+    // It will run when the page first loads and every time that any state changes
+    // The two pieces of state that can change to run this useEffect are:
+    // 1. numberOne when the Increase Number or Decrease Number button is clicked
+    // 2. result when the Add button is clicked, but only if the result changes
+
+    console.log('Hello, this displays when the page first renders and when any state changes!!')
   })
 
   useEffect(() => {
-    console.log('The first time that the page loads.')
+    // This useEffect takes in a callback function and an empty dependency array
+    // It will only run when the page first loads
+    
+    console.log('Hola, you see me the first time that the page renders.')
   }, [])
 
   useEffect(() => {
-    console.log('The page rendered and every time that result changes')
+    // This useEffect takes in a callback function and a dependency array
+    // It will run when the page first loads and every time that any result changes
+
+    console.log('Howdy, when the page first renders and every time that result changes.')
   }, [result])
 
 
