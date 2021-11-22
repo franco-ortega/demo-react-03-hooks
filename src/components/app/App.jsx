@@ -33,6 +33,7 @@ function App() {
   const numberTwo = 5;
   const word = 'First';
 
+  // click handler to increase numberOne
   const onNumberIncrease = () => {
 
     // This first approach will directly change/mutate the numberOne state:
@@ -45,10 +46,13 @@ function App() {
     setNumberOne(prevState => prevState + 1);
   };
 
+  // click handler to decrease numberOne
   const onNumberDecrease = () => {
     setNumberOne(prevState => prevState - 1);
   };
 
+
+  // click handler to add numberOne and numberTwo
   const addNumbers = () => {
     
     // This is similar to the first approach used in onNumberIncrease, but
