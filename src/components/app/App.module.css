@@ -1,0 +1,29 @@
+.App {
+  border: thick solid green;
+  background: lightgrey;
+  margin: 3rem;
+  padding: 1rem;
+}
+
+.App section {
+  border: medium solid red;
+  margin: 1rem;
+  padding: 0.25rem;
+}
+
+.App section:nth-child(4) {
+  margin-bottom: 4rem;
+}
+
+.App section:last-child {
+  border: medium solid blue;
+}
+
+.App button {
+  padding: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+.App button + button {
+  margin-left: 0.5rem;
+}

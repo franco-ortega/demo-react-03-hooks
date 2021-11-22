@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import Child from '../child/Child';
+import styles from './App.module.css';
 
 function App() {
   // The useState hook creates a new piece of state and a function for updating that state
@@ -135,23 +136,35 @@ function App() {
 
 
   return (
-    <div>
-      Number One: {numberOne}
-      <button onClick={onNumberIncrease}>Increase Number</button>
-      <button onClick={onNumberDecrease}>Decrease Number</button>
+    <div className={styles.App}>
+      APP:
+      <section>
+        <p>Number One: {numberOne}</p>
+        <button onClick={onNumberIncrease}>Increase Number</button>
+        <button onClick={onNumberDecrease}>Decrease Number</button>
+      </section>
 
-      <p>Number Two: {numberTwo}</p>
+      <section>
+        <p>Number Two: {numberTwo}</p>
+      </section>
 
-      <button onClick={addNumbers}>Add</button>
-      <p>Result: {result}</p>
+      <section>
+        <button onClick={addNumbers}>Add</button>
+        <p>Result: {result}</p>
+      </section>
 
-      <p>Word: {word}</p>
+      <section>
+        <p>Word: {word}</p>
+      </section>
 
-      CHILD:
-      <Child 
-        numberOne={numberOne}
-        childWord={word}
-      />
+        CHILD:
+      <section>
+        <Child 
+          numberOne={numberOne}
+          childWord={word}
+        />
+      </section>
+
     </div>
   )
 }
