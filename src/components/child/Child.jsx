@@ -1,9 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Child.module.css';
 
 const Child = ({ numberOne, childWord}) => {
   return (
-    <div>
+    <div className={styles.Child}>
+      CHILD COMPONENT
       <p>
         NUMBER ONE: {numberOne}
       </p>

@@ -1,0 +1,11 @@
+.Child {
+  border: thin solid purple;
+  background: lightblue;
+
+  width: fit-content;
+  padding: 1rem;
+}
+
+.Child p {
+  margin: 0.5rem 0;
+}
