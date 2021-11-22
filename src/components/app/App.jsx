@@ -6,9 +6,11 @@ function App() {
   // const [numberTwo, setNumberTwo] = useState(5);
   const [result, setResult] = useState(0);
 
-  const [word, setWord] = useState('First')
+  // const [word, setWord] = useState('First');
 
   const numberTwo = 5;
+
+  const word = 'First';
 
   const onNumberIncrease = () => {
     console.log('increase button clicked');
