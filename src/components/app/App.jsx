@@ -34,6 +34,7 @@ function App() {
   const numberTwo = 5;
   const word = 'First';
 
+
   // click handler to increase numberOne
   const onNumberIncrease = () => {
 
@@ -46,6 +47,7 @@ function App() {
     //
     setNumberOne(prevState => prevState + 1);
   };
+
 
   // click handler to decrease numberOne
   const onNumberDecrease = () => {
@@ -120,6 +122,7 @@ function App() {
     console.log('Hello, this displays when the page first renders and when any state changes!!')
   })
 
+
   useEffect(() => {
     // This useEffect takes in a callback function and an empty dependency array
     // It will only run when the page first loads
@@ -127,9 +130,10 @@ function App() {
     console.log('Hola, you see me the first time that the page renders.')
   }, [])
 
+
   useEffect(() => {
-    // This useEffect takes in a callback function and a dependency array
-    // It will run when the page first loads and every time that any result changes
+    // This useEffect takes in a callback function and a dependency array with one item
+    // It will run when the page first loads and every time that result changes
 
     console.log('Howdy, when the page first renders and every time that result changes.')
   }, [result])
